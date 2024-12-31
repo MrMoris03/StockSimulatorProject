@@ -9,6 +9,7 @@
 
 using namespace std;
 
+// Stock class to represent individual stock info
 struct Stock {
 	public:
 		string name;
@@ -22,3 +23,6 @@ struct Stock {
 			price = round(price * 100) / 100.0;
 		}
 };
+
+// Portfolio class to manage user's stock holdings
+struct Portfolio {
