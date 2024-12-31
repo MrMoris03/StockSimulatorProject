@@ -26,3 +26,5 @@ struct Stock {
 
 // Portfolio class to manage user's stock holdings
 struct Portfolio {
+		public:
+			map<string, int> holdings;
