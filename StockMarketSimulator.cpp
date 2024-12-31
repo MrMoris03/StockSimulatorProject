@@ -15,3 +15,10 @@ struct Stock {
 		float price;
 		
 		Stock(string name, float price) : name(name), price(price) {}
+				
+		void updatePrice() {
+			float change = ((rand() % 100) - 50) / 100.0;
+			price *= (1 + change);
+			price = round(price * 100) / 100.0;
+		}
+};
