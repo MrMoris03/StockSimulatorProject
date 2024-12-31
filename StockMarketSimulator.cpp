@@ -33,3 +33,6 @@ struct Portfolio {
 			void buyStock(const string& ticker, int quantity) {
 			holdings[ticker] += quantity;
 			}
+			
+			// Sell stock (reduce holdings)
+			void sellStock(const string& ticker, int quantity) {
