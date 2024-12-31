@@ -28,3 +28,8 @@ struct Stock {
 struct Portfolio {
 		public:
 			map<string, int> holdings;
+			
+			// Buy stock (add to holdings)
+			void buyStock(const string& ticker, int quantity) {
+			holdings[ticker] += quantity;
+			}
