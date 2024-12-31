@@ -13,3 +13,5 @@ struct Stock {
 	public:
 		string name;
 		float price;
+		
+		Stock(string name, float price) : name(name), price(price) {}
