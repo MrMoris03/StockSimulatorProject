@@ -26,13 +26,16 @@ struct Stock {
 
 // Portfolio class to manage user's stock holdings
 struct Portfolio {
-		public:
-			map<string, int> holdings;
+	public:
+		map<string, int> holdings;
 			
-			// Buy stock (add to holdings)
-			void buyStock(const string& ticker, int quantity) {
-			holdings[ticker] += quantity;
+		// Buy stock (add to holdings)
+		void buyStock(const string& ticker, int quantity) {
+		holdings[ticker] += quantity;
+		}
+			
+		// Sell stock (reduce holdings)
+		void sellStock(const string& ticker, int quantity) {
+			if (holdings[ticker] >= quantity) {
+				holdings[ticker] -= quantity;
 			}
-			
-			// Sell stock (reduce holdings)
-			void sellStock(const string& ticker, int quantity) {
