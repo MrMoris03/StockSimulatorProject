@@ -48,3 +48,14 @@ struct Portfolio {
 			float totalValue = 0;
 			cout << "\nYour Portfolio: ";
 			cout << left << setw(10) << "Ticker" << setw(15) << "Company" << setw(10) << "Quantity" << setw(10) << "Price" << setw(10) << "Value" << endl;
+			for (const auto& entry : holdings) {
+				const  string& ticker = entry.first;
+				int quantity = entry.second;
+				float price = stocks.at(ticker).price;
+				float value = price * quantity;
+				totalValue += value;
+				cout << left << setw(10) << ticker << setw(15) << stocks.at(ticker).name << setw(10) << quantity << setw(10) << price << setw(10) << value << endl;
+			}
+			cout << "\nTotal Portfolio Value: $" << fixed << setprecision(2) <<totalValue << endl;
+		}
+};
