@@ -42,3 +42,9 @@ struct Portfolio {
 				cout << "You don't have enough shares of " << ticker << " to sell.\n";
 			}
 		}
+		
+		// View portfolio with stock quantities and values
+		void viewPortfolio(const map<string, Stock>& stocks) {
+			float totalValue = 0;
+			cout << "\nYour Portfolio: ";
+			cout << left << setw(10) << "Ticker" << setw(15) << "Company" << setw(10) << "Quantity" << setw(10) << "Price" << setw(10) << "Value" << endl;
