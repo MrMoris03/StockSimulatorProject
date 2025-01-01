@@ -38,4 +38,7 @@ struct Portfolio {
 		void sellStock(const string& ticker, int quantity) {
 			if (holdings[ticker] >= quantity) {
 				holdings[ticker] -= quantity;
+			} else {
+				cout << "You don't have enough shares of " << ticker << " to sell.\n";
 			}
+		}
