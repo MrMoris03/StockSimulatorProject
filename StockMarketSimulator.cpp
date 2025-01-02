@@ -87,6 +87,18 @@ int main() {
 	
 	int choice;
 	while (true) {
+		// Simulate stock price changes periodically
 		for (auto& stock : stocks)  {
 			stock.second.updatePrice();
 		}
+		
+		//Display menu
+		cout << "\n--- Stock Market Simulator ---\n";
+		cout << "1. View Available Stocks\n";
+		cout << "2. View Portfolio\n";
+		cout << "3. Buy Stocks\n";
+		cout << "4. Sell Stocks\n";
+		cout << "5. Exit\n";
+		cout << "\nEnter your choice (1-5): ";
+		cin  >> choice;
+		
