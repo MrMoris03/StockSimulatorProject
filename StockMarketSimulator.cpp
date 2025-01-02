@@ -74,3 +74,13 @@ void displayStocks(const map<string, Stock>& stocks) {
 int main() {
 	srand(time(0)); //// Seed for random number generation
 	
+	//Sample stocks
+	map<string, Stock> stocks = {
+		{"AAPL", Stock("Apple Inc.", 150.00)},
+		{"GOOG", Stock("Alphabet Inc.", 2800.00)},
+		{"AMZN", Stock("Amazon.com Inc.", 3500.00)},
+		{"TSLA", Stock("Tesla Inc.", 900.00)},
+		{"MSFT", Stock("Microsoft Corp.", 300.00)}
+	};
+	
+	Portfolio portfolio;
