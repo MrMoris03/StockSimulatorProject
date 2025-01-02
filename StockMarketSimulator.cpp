@@ -59,3 +59,13 @@ struct Portfolio {
 			cout << "\nTotal Portfolio Value: $" << fixed << setprecision(2) <<totalValue << endl;
 		}
 };
+
+// Display available stocks
+void displayStocks(const map<string, Stock>& stocks) {
+	cout << "\nAvailable Stocks: ";
+	cout << left << setw(10) << "Ticker" << setw(15) << "Company" << setw(10) << "Price" << endl;
+	for  (const auto& stock : stocks) {
+		cout << left << setw(10) << stock.first << setw(15) << stock.second.name << setw(10) << stock.second.price << endl;
+		
+	}
+}
