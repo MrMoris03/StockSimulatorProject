@@ -69,3 +69,8 @@ void displayStocks(const map<string, Stock>& stocks) {
 		
 	}
 }
+
+//Main function to simulate stock trading
+int main() {
+	srand(time(0)); //// Seed for random number generation
+	
