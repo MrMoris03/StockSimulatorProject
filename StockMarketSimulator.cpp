@@ -102,3 +102,7 @@ int main() {
 		cout << "\nEnter your choice (1-5): ";
 		cin  >> choice;
 		
+		switch (choice) {
+			case 1: {
+				displayStocks(stocks);
+				break;
