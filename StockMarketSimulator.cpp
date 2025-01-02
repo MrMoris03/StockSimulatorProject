@@ -84,3 +84,9 @@ int main() {
 	};
 	
 	Portfolio portfolio;
+	
+	int choice;
+	while (true) {
+		for (auto& stock : stocks)  {
+			stock.second.updatePrice();
+		}
