@@ -111,3 +111,9 @@ int main() {
 				portfolio.viewPortfolio(stocks);
 				break;
 			}
+			case 3: {
+				displayStocks(stocks);
+				string ticker;
+				int quantity;
+				cout << "\nEnter the ticker symbol of the stock you want to buy: ";
+				cin >> ticker;
