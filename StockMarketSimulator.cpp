@@ -117,3 +117,17 @@ int main() {
 				int quantity;
 				cout << "\nEnter the ticker symbol of the stock you want to buy: ";
 				cin >> ticker;
+				if (stocks.find(ticker) != stocks.end()) {
+					cout << "Enter quantity to buy: ";
+					cin >> quantity;
+					if (quantity > 0) {
+						portfolio.buyStock(ticker, quantity);
+						cout << "Bought " << quantity << " shares of " << ticker << ".\n";
+					} else {
+						cout << "Invalid quantity.\n";
+					}
+				} else {
+					cout << "Invalid ticker symbol.\n";
+				}
+				break;
+			}
