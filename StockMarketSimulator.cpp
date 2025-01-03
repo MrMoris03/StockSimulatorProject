@@ -106,3 +106,8 @@ int main() {
 			case 1: {
 				displayStocks(stocks);
 				break;
+			}
+			case 2: {
+				portfolio.viewPortfolio(stocks);
+				break;
+			}
