@@ -131,3 +131,23 @@ int main() {
 				}
 				break;
 			}
+			case 4: {
+				portfolio.viewPortfolio(stocks);
+				string ticker;
+				int quantity;
+				cout << "\nEnter the ticker symbol of stock you want to sell: ";
+				cin >> ticker;
+				if (stocks.find(ticker)!= stocks.end()) {
+					cout << "Enter quantity to sell: ";
+					cin >> quantity;
+					if (quantity > 0) {
+						portfolio.sellStock(ticker, quantity);
+						cout << "Sold " << quantity << " shares of " << ticker << ".\n";
+					} else {
+						cout << "Invalid quantity.\n";
+					}
+				} else {
+					cout << "Invalid ticker symbol.\n";
+				}
+				break;
+			}
