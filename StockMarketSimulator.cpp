@@ -161,3 +161,10 @@ int main() {
 			}
 			
 		}
+		//Adding brief pause before showing the next menu
+		system("pause");
+	}
+	
+	return 0;
+}
+
