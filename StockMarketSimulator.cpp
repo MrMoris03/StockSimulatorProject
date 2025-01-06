@@ -151,3 +151,13 @@ int main() {
 				}
 				break;
 			}
+			case 5: {
+				cout << "Exitimg Stock Market Simulator. Goodbye!\n";
+				return 0;
+			}
+			default: {
+				cout << "Invalid choice. Please choose again.\n";
+				break;
+			}
+			
+		}
